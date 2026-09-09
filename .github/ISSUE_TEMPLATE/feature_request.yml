@@ -1,0 +1,19 @@
+name: Suggest a feature
+description: Share an idea for improving Blurb.
+title: "[Idea] "
+body:
+  - type: markdown
+    attributes:
+      value: "This is public. Please leave out private messages and personal details."
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How would you like it to work?
+    validations:
+      required: true
