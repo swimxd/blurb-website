@@ -1,0 +1,56 @@
+name: Report a bug
+description: Tell us about a problem with Blurb.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: "Reports are public. Do not share real messages, API keys, phone numbers, or unreviewed logs. Use fictional examples."
+  - type: input
+    id: version
+    attributes:
+      label: Blurb version
+      description: Find this in Settings > About.
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Phone and Android version
+      placeholder: "OnePlus 15, Android version"
+    validations:
+      required: true
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Summarization mode
+      options:
+        - On-device
+        - Cloud
+        - Not sure
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Provider and model, if known
+      description: Include whether fallback is enabled. Never include your API key or private endpoint URL.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the messaging app involved and any steps that reproduce the issue using fictional messages.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before submitting
+      options:
+        - label: I checked this report and any attachments for private information.
+          required: true
