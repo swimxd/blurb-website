@@ -1,0 +1,9 @@
+# Repository and tooling files that must not be published at blurb.fyi.
+.git
+.github
+.wrangler
+node_modules
+.assetsignore
+.gitignore
+wrangler.jsonc
+README.md
