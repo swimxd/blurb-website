@@ -1,1 +1,5 @@
 blank_issues_enabled: false
+contact_links:
+  - name: Email support
+    url: https://blurb.fyi/support
+    about: For private questions, purchases, or anything you'd rather not post publicly, email support@blurb.fyi.
