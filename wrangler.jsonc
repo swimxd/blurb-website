@@ -1,0 +1,13 @@
+{
+  // blurb.fyi is this repository served as static files by a Cloudflare Worker.
+  // Workers Builds deploys main on every push. The name must match the Worker in the dashboard.
+  "name": "blurb-website",
+  "compatibility_date": "2026-09-24",
+  "assets": {
+    "directory": ".",
+    // Missing pages show 404.html with a real 404 status.
+    "not_found_handling": "404-page",
+    // /guide serves guide.html, and /guide.html redirects to /guide.
+    "html_handling": "auto-trailing-slash"
+  }
+}

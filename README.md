@@ -7,7 +7,7 @@ Public website for Blurb: the product page, user guide, support and privacy poli
 - [Support](https://blurb.fyi/support)
 - [Privacy](https://blurb.fyi/privacy)
 
-Plain HTML and CSS, with no build step, framework or tracking. Cloudflare Pages publishes `main` at blurb.fyi and serves clean URLs (`/guide` for `guide.html`). GitHub Pages still serves the old address, `swimxd.github.io/blurb-website/`. A small script at the top of every page sends visitors there to the same page on blurb.fyi, so links in older app builds keep working. Don't add a `CNAME` file; Cloudflare owns the domain.
+Plain HTML and CSS, with no build step, framework or tracking. A Cloudflare Worker publishes `main` at blurb.fyi on every push (Workers Builds, configured in `wrangler.jsonc`) and serves clean URLs (`/guide` for `guide.html`). GitHub Pages still serves the old address, `swimxd.github.io/blurb-website/`. A small script at the top of every page sends visitors there to the same page on blurb.fyi, so links in older app builds keep working. Don't add a `CNAME` file; Cloudflare owns the domain.
 
 ## Editing
 
