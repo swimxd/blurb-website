@@ -9,7 +9,7 @@ body:
     id: version
     attributes:
       label: Blurb version
-      description: Find this in Settings > About Blurb. Include whether you are using the beta or main release.
+      description: Find this in Settings > About Blurb.
     validations:
       required: true
   - type: input
