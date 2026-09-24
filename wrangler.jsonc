@@ -9,5 +9,7 @@
     "not_found_handling": "404-page",
     // /guide serves guide.html, and /guide.html redirects to /guide.
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  // Pull-request branches build with `wrangler preview`, which requires this block (it can stay empty).
+  "previews": {}
 }
