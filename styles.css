@@ -38,7 +38,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 88px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.65 var(--sans); }
 a { color: var(--primary); text-underline-offset: 3px; }
@@ -60,7 +60,7 @@ p { margin: 0 0 16px; }
 .site-nav { display: flex; flex-wrap: wrap; gap: 4px 22px; margin-left: auto; font-size: 15px; }
 .site-nav a { color: var(--muted); text-decoration: none; padding: 6px 0; }
 .site-nav a:hover { color: var(--fg); }
-.site-nav a[aria-current="page"] { color: var(--fg); font-weight: 650; }
+.site-nav a[aria-current] { color: var(--fg); font-weight: 650; }
 @media (max-width: 720px) {
   .site-header { position: static; }
   .site-nav { order: 3; width: 100%; margin-left: 0; gap: 4px 20px; }
@@ -186,6 +186,8 @@ p { margin: 0 0 16px; }
 .docs { display: grid; gap: 28px; padding-top: 24px; padding-bottom: 80px; }
 @media (min-width: 900px) { .docs { grid-template-columns: 232px minmax(0, 1fr); gap: 64px; padding-top: 48px; } }
 .sidebar { font-size: 15px; min-width: 0; }
+/* The sidebar and the phone chip row scroll, which would clip an outside focus ring. */
+.sidebar a:focus-visible { outline-offset: -3px; }
 .side-pages, .side-sections { list-style: none; margin: 0; padding: 0; }
 .side-pages { display: grid; gap: 2px; }
 .side-pages a { display: block; padding: 8px 12px; border-radius: 10px; color: var(--fg); text-decoration: none; font-weight: 550; }
