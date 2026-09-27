@@ -107,3 +107,18 @@ button::before,.panel::before{display:none}
 .sidebar{background:#56556c99;padding:0 3px;font:26px/30px Arial,sans-serif;text-shadow:none}
 .standings{margin-top:10px;height:475px;font:bold 17px/22px Arial,sans-serif}
 .standing{max-width:124px;transition:top .12s linear}
+
+/* Page chrome stays visible; the race camera expands with the browser. */
+body{display:flex;flex-direction:column;height:100vh;height:100dvh}
+#tribute{flex:none;padding:8px 12px;text-align:center;color:#aaaabd;font:13px/18px Arial,sans-serif}
+#frame{flex:1;min-height:0;height:auto;overflow:hidden}
+#frame:fullscreen{width:100vw;height:100vh;background:#151522}
+#game{background-size:800px 600px;background-repeat:no-repeat}
+#scene{width:100%;height:100%}
+#ui{left:50%;right:auto;transform:translateX(-50%)}
+#game[data-screen="race"] #ui{left:0;width:100%;transform:none}
+#outside{flex:none;height:auto;min-height:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:6px 12px;font:12px/18px Arial,sans-serif}
+#outside button{font:inherit;min-height:36px;padding:8px 14px;border:1px solid #55556c;border-radius:5px;background:#252537;box-shadow:none;color:#ddddec}
+#outside button::before{display:none}
+.hud .question,.answers,.countdown{width:calc(100% - 128px)}
+.feedback,.finish-overlay{left:calc((100% - 128px)/2);transform:translateX(-50%)}

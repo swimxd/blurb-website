@@ -7,25 +7,26 @@ export {roadCenter,roadHeight};
 export function worldPosition(s,x=0,y=0){return new THREE.Vector3(roadCenter(s)+x,roadHeight(s)+y,-s);}
 export class World {
  constructor(canvas){
-  this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});this.renderer.setSize(800,600);this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  this.width=800;this.height=600;this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});this.renderer.setSize(800,600,false);this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));
   this.camera=new THREE.PerspectiveCamera(55,800/600,.05,400);this.scene=new THREE.Scene();this.mode='empty';this.time=0;this.gates=[];
  }
+ resize(width,height=600){this.width=width;this.height=height;this.renderer.setSize(width,height,false);this.camera.clearViewOffset();this.camera.aspect=width/height;if(this.mode==='preview')this.updatePreview(0);this.camera.updateProjectionMatrix();}
  clear(){this.scene.traverse(o=>{if(o.isMesh){o.geometry.dispose();for(const m of (Array.isArray(o.material)?o.material:[o.material]))m.dispose();}});this.scene.clear();this.scene.background=null;this.scene.fog=null;this.gates=[];this.previewCar=null;this.playerCar=null;this.mode='empty';}
  light(){this.scene.add(new THREE.AmbientLight(0xffffff,1.45));const sun=new THREE.DirectionalLight(0xffffff,1.9);sun.position.set(-30,60,25);this.scene.add(sun);}
  async preview(car){
   const token=this.token=Symbol();this.clear();this.light();const model=await loadCar(car);if(this.token!==token)return;
   this.scene.add(model);this.previewCar=model;this.mode='preview';
-  this.camera.fov=55;this.camera.aspect=800/600;this.camera.updateProjectionMatrix();
+  this.camera.fov=55;this.camera.aspect=this.width/this.height;this.camera.updateProjectionMatrix();
   const box=new THREE.Box3().setFromObject(model),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());
   this.previewCenter=center;this.previewRadius=Math.max(size.x,size.y,size.z)*1.55;this.updatePreview(0);
  }
  updatePreview(dt){if(!this.previewCar)return;this.time+=dt;const c=this.previewCenter,r=this.previewRadius;
   this.camera.position.set(c.x+Math.cos(this.time*.35)*r,c.y+r*.65,c.z+Math.sin(this.time*.35)*r);this.camera.lookAt(c);
   // Shift the preview left to leave space for original-style vehicle information.
-  this.camera.setViewOffset(800,600,210,0,800,600);
+  this.camera.setViewOffset(this.width,this.height,210,0,this.width,this.height);
  }
  async race(car,opponents,terrainIndex,catalog,round){
-  this.token=Symbol();this.clear();this.cameraHeading=null;this.camera.clearViewOffset();this.camera.fov=48;this.camera.aspect=800/600;this.camera.updateProjectionMatrix();
+  this.token=Symbol();this.clear();this.cameraHeading=null;this.camera.clearViewOffset();this.camera.fov=48;this.camera.aspect=this.width/this.height;this.camera.updateProjectionMatrix();
   this.light();this.scene.background=new THREE.Color(0xb2bde3);this.scene.fog=new THREE.Fog(0xb2bde3,95,240);
   const rng=seededRandom(round*137+47);
   this.terrain=catalog.terrains[terrainIndex];this.terrainMeshes=[];this.terrainKey=null;this.updateTerrain(0,0);
@@ -94,5 +95,5 @@ export class World {
    positions.needsUpdate=true;
   }
  }
- render(dt){if(this.mode==='preview')this.updatePreview(dt);this.renderer.setViewport(0,0,800,600);this.renderer.setScissorTest(false);this.renderer.render(this.scene,this.camera);}
+ render(dt){if(this.mode==='preview')this.updatePreview(dt);this.renderer.setViewport(0,0,this.width,this.height);this.renderer.setScissorTest(false);this.renderer.render(this.scene,this.camera);}
 }
