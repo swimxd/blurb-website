@@ -7,3 +7,8 @@ node_modules
 .gitignore
 wrangler.jsonc
 README.md
+showreel
+tests
+tools
+package.json
+package-lock.json

@@ -1,0 +1,27 @@
+{
+  "name": "blurb-showreel",
+  "version": "6.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "preview": "node server.cjs",
+    "motion": "node motion_pass.js out/motion.json",
+    "render": "node render2.js out/picture.mp4 0 1764 out/motion.json",
+    "draft": "node render2.js out/draft-picture.mp4 0 882 --draft"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@fontsource/jetbrains-mono": "5.2.8",
+    "@fontsource/noto-sans": "5.3.0",
+    "@fontsource/noto-serif": "5.3.0",
+    "@fontsource/nunito": "5.3.0",
+    "gsap": "3.15.0",
+    "playwright": "1.58.2",
+    "sharp": "0.35.4"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

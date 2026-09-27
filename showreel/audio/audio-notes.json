@@ -1,0 +1,16 @@
+{
+  "bpm": 84,
+  "duration": 29.4,
+  "sampleRate": 48000,
+  "uiCues": [],
+  "transitionWashCenters": [
+    4.8,
+    13.8,
+    16.8,
+    24.6
+  ],
+  "masterTarget": {
+    "integratedLufs": -20,
+    "truePeakDbtp": -1.5
+  }
+}

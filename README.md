@@ -7,7 +7,7 @@ Public website for Blurb: the product page, user guide, support and privacy poli
 - [Support](https://blurb.fyi/support)
 - [Privacy](https://blurb.fyi/privacy)
 
-Plain HTML and CSS, with no build step, framework or tracking. A Cloudflare Worker publishes `main` at blurb.fyi on every push (Workers Builds, configured in `wrangler.jsonc`) and serves clean URLs (`/guide` for `guide.html`). GitHub Pages still serves the old address, `swimxd.github.io/blurb-website/`. A small script at the top of every page sends visitors there to the same page on blurb.fyi, so links in older app builds keep working. Don't add a `CNAME` file; Cloudflare owns the domain.
+Plain HTML and CSS, with no build step, framework or tracking; hero playback uses a small local script. A Cloudflare Worker publishes `main` at blurb.fyi on every push (Workers Builds, configured in `wrangler.jsonc`) and serves clean URLs (`/guide` for `guide.html`). GitHub Pages still serves the old address, `swimxd.github.io/blurb-website/`. A small script at the top of every page sends visitors there to the same page on blurb.fyi, so links in older app builds keep working. Don't add a `CNAME` file; Cloudflare owns the domain.
 
 ## Editing
 
@@ -16,7 +16,7 @@ Plain HTML and CSS, with no build step, framework or tracking. A Cloudflare Work
 - Internal links are relative and extensionless (`guide#pro`) so they work on both hosts. `404.html` uses root paths because it can be served at any URL.
 - Keep the guide's section IDs (`#setup`, `#engines`, `#timing`, `#reading`, `#apps`, `#pro`, `#troubleshooting`, `#privacy`); the app and older pages link to them.
 - The privacy policy must say the same thing as the app's `app/src/main/assets/privacy-policy.txt`. Update both together.
-- Preview locally with `npx serve` (it handles clean URLs). Check a phone-width window and dark mode.
+- Preview locally with `npm run preview` (Node 22+, no install needed). Open http://127.0.0.1:4173. Check a phone-width window and both color themes.
 
 ## When Blurb goes live on Google Play
 
@@ -29,3 +29,14 @@ sed -i 's#<span class="play play-soon">Coming soon to Google Play</span>#<a clas
 Then update the sentence in the closing section of `index.html` that says Blurb is coming to Google Play.
 
 This repository does not host app source, build instructions, private diagnostics or APK downloads.
+
+## Hero reel
+
+The hero plays the 29.4-second v6 reel silently once, then holds the last frame. Visitors can replay, toggle sound, enter fullscreen, or restart with sound. Reduced motion, data saving and blocked autoplay keep a summary-scene poster until explicit playback. Leaving the viewport or hiding the tab pauses playback without erasing a deliberate pause. A text walkthrough and native controls provide fallbacks.
+
+- `hero-player.js` contains the small playback controller. Run `npm test` for intent/lifecycle checks.
+- `media/` contains the two web MP4s and poster. Mobile browsers can select the 720p source; desktop uses 1080p. Each asset is below Cloudflare's 25 MiB limit.
+- `showreel/README.md` describes the editable animation, original score and portable rendering workflow. Source, audio stems, tools and tests are excluded by `.assetsignore`.
+- The local preview is review-only. Publishing to `main` deploys automatically and remains a separate step.
+
+For manual browser QA, run `node tools/qa-fixtures.mjs`, then open `/tests/browser/?mode=reduced&theme=light` on the local preview. Modes are `normal`, `reduced`, `save`, `blocked`, `native`, and `failure`; themes are `light` and `dark`. These generated fixtures use the real hero and playback script, with narrow preference/failure shims. They are ignored by Git and excluded from hosting. Use `npm test` for the queued native-media-event regressions as well as the playback intent checks.
