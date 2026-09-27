@@ -1,4 +1,4 @@
-"""Blurb v6: original 84 BPM ambient pulse, 29.4 s / 48 kHz stereo.
+"""Blurb v6: original 96 BPM warm electronic pulse, 29.4 s / 48 kHz stereo.
 No notification, highlight, toggle, typing or completion cues.
 Run: python audio.py [output-directory]. Master raw-score.wav with export.py.
 """
@@ -10,7 +10,7 @@ import numpy as np
 
 SR = 48000
 DURATION = 29.4
-BPM = 84
+BPM = 96
 N = round(SR * DURATION)
 RNG = np.random.default_rng(806)
 OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "out"
@@ -45,33 +45,48 @@ def pad(notes, duration):
             phase = RNG.uniform(0, 2 * np.pi)
             breath = .82 + .18 * np.sin(2 * np.pi * .083 * t + i * .8)
             voice = np.sin(2 * np.pi * f * t + phase)
-            voice += .13 * np.sin(2 * np.pi * f * 2 * t + phase)
-            voice += .025 * np.sin(2 * np.pi * f * 3 * t)
+            voice += .19 * np.sin(2 * np.pi * f * 2 * t + phase)
+            voice += .04 * np.sin(2 * np.pi * f * 3 * t)
             out[:, side] += voice * breath / len(notes)
     return out * envelope(len(t), 1.8, 2.4)[:, None]
 
 # Open voicings; overlapping, slow harmonic movement without an arpeggio.
 chords = [
     [50, 57, 61, 64, 66],  # Dmaj9
-    [47, 54, 57, 61, 64],  # Bm11
+    [45, 52, 57, 59, 61],  # Aadd9
     [43, 50, 54, 57, 62],  # Gmaj9
     [45, 52, 57, 59, 64],  # Asus2
     [50, 57, 61, 64, 66],
 ]
 for chord, start in zip(chords, [-.7, 5.1, 11.0, 16.9, 22.8]):
-    place(music, pad(chord, 8.0), start, .28)
+    place(music, pad(chord, 8.0), start, .22)
 
-# A low, rounded pulse at 84 BPM. Slow attack avoids click-like transients.
+# A gently propulsive low pulse at 96 BPM, still rounded rather than punchy.
 beat = 60 / BPM
 for i, start in enumerate(np.arange(.5, DURATION - 1.9, beat)):
     t = np.arange(round(.56 * SR)) / SR
-    root = 50 if start < 5.1 or start >= 22.8 else (47 if start < 11 else 43 if start < 16.9 else 45)
+    root = 50 if start < 5.1 or start >= 22.8 else (45 if start < 11 else 43 if start < 16.9 else 45)
     f = hz(root - 12)
     tone = np.sin(2 * np.pi * f * t) + .16 * np.sin(2 * np.pi * 2 * f * t)
-    env = (1 - np.exp(-t / .045)) ** 2 * np.exp(-t / .18)
+    env = (1 - np.exp(-t / .025)) ** 2 * np.exp(-t / .16)
     env *= envelope(len(t), .025, .14)
-    strength = .11 if i % 4 == 0 else .075
+    strength = .18 if i % 4 == 0 else .13
     place(music, np.column_stack([tone * env, tone * env]), start, strength)
+
+# Soft offbeat chord pulses add lift, with all notes together (no arpeggio).
+# The musical grid is independent of the on-screen interactions.
+for i, start in enumerate(np.arange(.5 + beat / 2, DURATION - 2.0, beat)):
+    chord_index = 0 if start < 5.1 else 1 if start < 11 else 2 if start < 16.9 else 3 if start < 22.8 else 4
+    t = np.arange(round(.38 * SR)) / SR
+    pulse = np.zeros((len(t), 2))
+    for note in chords[chord_index][1:]:
+        for side, detune in enumerate((-.0008, .0008)):
+            f = hz(note) * (1 + detune)
+            pulse[:, side] += (np.sin(2 * np.pi * f * t)
+                              + .15 * np.sin(2 * np.pi * 2 * f * t)) / 4
+    env = (1 - np.exp(-t / .04)) ** 2 * np.exp(-t / .11)
+    pulse *= (env * envelope(len(t), .035, .16))[:, None]
+    place(music, pulse, start, .12 if i % 4 in (0, 2) else .08)
 
 def air(duration, lower=450, upper=2100):
     n = round(duration * SR)
@@ -88,6 +103,13 @@ def air(duration, lower=450, upper=2100):
 bed = air(DURATION, 250, 1500)
 t = np.arange(N) / SR
 music += bed * (.0018 * (.6 + .4 * np.sin(2 * np.pi * .08 * t) ** 2))[:, None]
+
+# A quiet brushed texture gives the groove a little forward movement.
+# Filtered noise only: no metallic hats, claps, bells or UI-like ticks.
+brush = air(.20, 900, 2900)
+brush *= envelope(len(brush), .04, .14)[:, None]
+for i, start in enumerate(np.arange(.5, DURATION - 1.9, beat / 2)):
+    place(music, brush, start, .0034 if i % 2 else .0018)
 
 # Only broad chapter washes. All UI interactions are intentionally silent.
 for time in (4.8, 13.8, 16.8, 24.6):
