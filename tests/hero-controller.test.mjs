@@ -27,7 +27,7 @@ class Video extends Element {
 }
 function fixture() {
   const video = new Video(), root = new Element(), document = new Element();
-  const buttons = Object.fromEntries(['controls', 'play', 'mute', 'sound', 'fullscreen', 'status', 'error'].map(name => [name, new Element()]));
+  const buttons = Object.fromEntries(['controls', 'play', 'mute', 'mute-label', 'fullscreen', 'status', 'error'].map(name => [name, new Element()]));
   root.querySelector = selector => selector === 'video' ? video : buttons[selector.slice(11, -1)];
   document.hidden = false;
   const motion = new Element(); motion.matches = false;
@@ -77,5 +77,57 @@ test('an environmental pause still resumes through the actual controller', async
     f.hidden(false); await Promise.resolve(); f.video.flush();
     assert.equal(f.video.playCalls, 2);
     assert.equal(f.video.paused, false);
+  } finally { f.close(); }
+});
+
+test('clicking the picture enables audio in place without restarting or pausing', async () => {
+  const f = fixture();
+  try {
+    f.enter(); await Promise.resolve(); f.video.flush();
+    f.video.currentTime = 12.4;
+    f.video.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, false);
+    assert.equal(f.video.currentTime, 12.4);
+    assert.equal(f.video.playCalls, 1);
+    assert.equal(f.video.paused, false);
+    f.video.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, false, 'another picture click does not mute');
+    assert.equal(f.buttons.mute.attributes['aria-pressed'], 'true');
+  } finally { f.close(); }
+});
+
+test('enabling sound preserves deliberate pauses and the final hold', async () => {
+  const f = fixture();
+  try {
+    f.enter(); await Promise.resolve(); f.video.flush();
+    f.buttons.play.dispatchEvent(new Event('click')); f.video.flush();
+    f.video.currentTime = 11;
+    f.video.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, false);
+    assert.equal(f.video.paused, true);
+    assert.equal(f.video.currentTime, 11);
+    f.video.ended = true; f.video.currentTime = 29.4;
+    f.video.dispatchEvent(new Event('ended'));
+    f.buttons.mute.dispatchEvent(new Event('click'));
+    f.video.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, false);
+    assert.equal(f.video.currentTime, 29.4);
+    assert.equal(f.video.playCalls, 1);
+  } finally { f.close(); }
+});
+
+test('the speaker toggles audio without seeking and native controls keep their behavior', () => {
+  const f = fixture();
+  try {
+    f.video.currentTime = 9;
+    f.buttons.mute.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, false);
+    f.buttons.mute.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, true);
+    assert.equal(f.video.currentTime, 9);
+    assert.equal(f.buttons['mute-label'].textContent, 'Sound off');
+    f.video.controls = true;
+    f.video.dispatchEvent(new Event('click'));
+    assert.equal(f.video.muted, true, 'native fullscreen controls must not trigger click-to-unmute');
   } finally { f.close(); }
 });

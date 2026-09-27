@@ -97,17 +97,22 @@ p { margin: 0 0 16px; }
 
 /* Product reel. The complete 16:9 composition remains visible at every width. */
 .reel { min-width: 0; margin: 0; }
-.reel-surface { overflow: hidden; border-radius: 20px; border: 1px solid var(--line-strong); background: #14151d; box-shadow: var(--shadow); }
+.reel-surface { position: relative; overflow: hidden; border-radius: 20px; border: 1px solid var(--line-strong); background: #14151d; box-shadow: var(--shadow); }
 .reel-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
 .reel-video:fullscreen { width: 100%; height: 100%; background: #111; }
+.reel-enhanced .reel-video { cursor: pointer; }
+.reel-audio { position: absolute; top: 16px; right: 16px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 9px 14px; border: 1px solid #ffffff40; border-radius: 999px; background: #202231ed; color: #fff; box-shadow: 0 2px 12px #0002; font: 600 13px/1.3 var(--sans); cursor: pointer; }
+.reel-audio[hidden] { display: none; }
+.reel-audio:hover { background: #333750; }
+.reel-audio:focus-visible { outline: 3px solid #9caeff; outline-offset: -4px; }
+.reel-audio svg { flex: none; }
+.reel-audio[aria-pressed="false"] .speaker-waves, .reel-audio[aria-pressed="true"] .speaker-slash { display: none; }
 .reel-toolbar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px 16px; padding: 12px 0 4px; }
 .reel-toolbar[hidden], .reel-error[hidden] { display: none; }
 .reel-buttons { display: flex; align-items: center; gap: 4px; }
-.reel-control, .reel-watch { min-height: 44px; border: 1px solid transparent; border-radius: 10px; padding: 8px 12px; background: transparent; color: var(--muted); font: 550 14px/1.3 var(--sans); cursor: pointer; }
+.reel-control { min-height: 44px; border: 1px solid transparent; border-radius: 10px; padding: 8px 12px; background: transparent; color: var(--muted); font: 550 14px/1.3 var(--sans); cursor: pointer; }
 .reel-control:hover { background: var(--bg-alt); color: var(--fg); }
 .reel-control[aria-pressed="true"] { color: var(--primary); }
-.reel-watch { display: inline-flex; align-items: center; gap: 14px; color: var(--primary); font-weight: 650; }
-.reel-watch:hover { background: var(--container); color: var(--on-container); }
 .reel-caption { display: flex; align-items: baseline; justify-content: space-between; gap: 8px 20px; flex-wrap: wrap; padding: 4px 12px 0; color: var(--subtle); font-size: 12px; }
 .reel-transcript { max-width: 680px; text-align: right; }
 .reel-transcript summary { cursor: pointer; text-underline-offset: 3px; }
@@ -121,7 +126,8 @@ p { margin: 0 0 16px; }
   .hero-intro .lead { font-size: 17px; }
   .reel-surface { border-radius: 12px; }
   .reel-toolbar { gap: 0; }
-  .reel-control, .reel-watch { font-size: 12px; padding: 8px; }
+  .reel-control { font-size: 12px; padding: 8px; }
+  .reel-audio { top: 8px; right: 8px; padding: 8px 11px; font-size: 12px; }
   .reel-buttons { gap: 0; }
   .reel-caption { padding-inline: 8px; font-size: 11px; }
 }

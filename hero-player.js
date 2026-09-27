@@ -24,7 +24,7 @@ export function initHeroPlayer(root) {
   const controls = root.querySelector('[data-reel-controls]');
   const playButton = root.querySelector('[data-reel-play]');
   const muteButton = root.querySelector('[data-reel-mute]');
-  const soundButton = root.querySelector('[data-reel-sound]');
+  const muteLabel = root.querySelector('[data-reel-mute-label]');
   const fullscreenButton = root.querySelector('[data-reel-fullscreen]');
   const status = root.querySelector('[data-reel-status]');
   const errorMessage = root.querySelector('[data-reel-error]');
@@ -44,7 +44,7 @@ export function initHeroPlayer(root) {
     const finished = video.ended || intent.mode === 'ended';
     playButton.textContent = mediaFailed ? 'Retry' : finished ? 'Replay' : video.paused ? 'Play' : 'Pause';
     playButton.setAttribute('aria-label', mediaFailed ? 'Retry the Blurb video' : finished ? 'Replay the Blurb video' : video.paused ? 'Play the Blurb video' : 'Pause the Blurb video');
-    muteButton.textContent = video.muted ? 'Sound off' : 'Sound on';
+    muteLabel.textContent = video.muted ? 'Sound off' : 'Sound on';
     muteButton.setAttribute('aria-label', video.muted ? 'Turn sound on' : 'Turn sound off');
     muteButton.setAttribute('aria-pressed', String(!video.muted));
     status.textContent = mediaFailed ? 'Video unavailable' : finished ? '29 seconds · Replay any time' : '29 seconds · ' + (video.muted ? 'Sound off' : 'Sound on');
@@ -81,10 +81,9 @@ export function initHeroPlayer(root) {
     });
   };
 
-  const play = (restart = false, withSound = false) => {
+  const play = () => {
     if (mediaFailed || video.error) { mediaFailed = false; errorMessage.hidden = true; video.load(); }
-    if (restart || video.ended) video.currentTime = 0;
-    if (withSound) video.muted = false;
+    if (video.ended) video.currentTime = 0;
     intent.play();
     apply();
   };
@@ -94,7 +93,13 @@ export function initHeroPlayer(root) {
     else { intent.pause(); apply(); }
   });
   muteButton.addEventListener('click', () => { video.muted = !video.muted; refresh(); });
-  soundButton.addEventListener('click', () => play(true, true));
+  video.addEventListener('click', () => {
+    // Leave native fullscreen controls alone. A picture click only enables
+    // audio; playback position and the visitor's play/pause intent stay intact.
+    if (video.controls) return;
+    video.muted = false;
+    refresh();
+  });
   fullscreenButton.addEventListener('click', async () => {
     // Native controls remain available inside video-only fullscreen.
     video.controls = true;
@@ -155,6 +160,7 @@ export function initHeroPlayer(root) {
   // Only replace the fallback once all controls and lifecycle listeners exist.
   video.controls = false;
   controls.hidden = false;
+  muteButton.hidden = false;
   root.classList.add('reel-enhanced');
   refresh();
 }
