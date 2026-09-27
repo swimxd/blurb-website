@@ -1,0 +1,1976 @@
+{
+  "title": "Signal Flow",
+  "description": "A tighter, sparse rhythm with dry synth chords and a syncopated bass line.",
+  "bpm": 100,
+  "duration": 29.4,
+  "uiEffects": [],
+  "sectionsBeats": [
+    0,
+    8,
+    16,
+    23,
+    28,
+    33,
+    42,
+    49
+  ],
+  "events": [
+    {
+      "instrument": "kick",
+      "beat": 0.0,
+      "seconds": 0.0,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "kick",
+      "beat": 2.0,
+      "seconds": 1.2,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "kick",
+      "beat": 4.0,
+      "seconds": 2.4,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "kick",
+      "beat": 8.0,
+      "seconds": 4.8,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 9.0,
+      "seconds": 5.4,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 10.0,
+      "seconds": 6.0,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "brush",
+      "beat": 11.0,
+      "seconds": 6.6,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 12.0,
+      "seconds": 7.2,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 13.0,
+      "seconds": 7.8,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "brush",
+      "beat": 15.0,
+      "seconds": 9.0,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 16.0,
+      "seconds": 9.6,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 17.0,
+      "seconds": 10.2,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 18.0,
+      "seconds": 10.8,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "brush",
+      "beat": 19.0,
+      "seconds": 11.4,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 20.0,
+      "seconds": 12.0,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 21.0,
+      "seconds": 12.6,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "brush",
+      "beat": 23.0,
+      "seconds": 13.8,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 24.0,
+      "seconds": 14.4,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 25.0,
+      "seconds": 15.0,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 26.0,
+      "seconds": 15.6,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "brush",
+      "beat": 27.0,
+      "seconds": 16.2,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 28.0,
+      "seconds": 16.8,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 29.0,
+      "seconds": 17.4,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "brush",
+      "beat": 31.0,
+      "seconds": 18.6,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 32.0,
+      "seconds": 19.2,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 33.0,
+      "seconds": 19.8,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 34.0,
+      "seconds": 20.4,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "brush",
+      "beat": 35.0,
+      "seconds": 21.0,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 36.0,
+      "seconds": 21.6,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "brush",
+      "beat": 37.0,
+      "seconds": 22.2,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 38.0,
+      "seconds": 22.8,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "brush",
+      "beat": 39.0,
+      "seconds": 23.4,
+      "duration": 0.21,
+      "notes": null,
+      "level": 0.15
+    },
+    {
+      "instrument": "kick",
+      "beat": 40.0,
+      "seconds": 24.0,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "kick",
+      "beat": 42.0,
+      "seconds": 25.2,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.33
+    },
+    {
+      "instrument": "kick",
+      "beat": 44.0,
+      "seconds": 26.4,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.44
+    },
+    {
+      "instrument": "kick pickup",
+      "beat": 7.5,
+      "seconds": 4.5,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.22
+    },
+    {
+      "instrument": "kick pickup",
+      "beat": 15.25,
+      "seconds": 9.15,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.22
+    },
+    {
+      "instrument": "kick pickup",
+      "beat": 22.5,
+      "seconds": 13.5,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.22
+    },
+    {
+      "instrument": "kick pickup",
+      "beat": 27.5,
+      "seconds": 16.5,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.22
+    },
+    {
+      "instrument": "kick pickup",
+      "beat": 31.25,
+      "seconds": 18.75,
+      "duration": 0.34,
+      "notes": null,
+      "level": 0.22
+    },
+    {
+      "instrument": "shaker",
+      "beat": 1.0,
+      "seconds": 0.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 1.5,
+      "seconds": 0.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 2.0,
+      "seconds": 1.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 2.5,
+      "seconds": 1.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 3.0,
+      "seconds": 1.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 3.5,
+      "seconds": 2.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 4.0,
+      "seconds": 2.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 4.5,
+      "seconds": 2.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 5.0,
+      "seconds": 3.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 5.5,
+      "seconds": 3.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 6.0,
+      "seconds": 3.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 6.5,
+      "seconds": 3.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 7.0,
+      "seconds": 4.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 7.5,
+      "seconds": 4.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 8.0,
+      "seconds": 4.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 8.5,
+      "seconds": 5.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 9.0,
+      "seconds": 5.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 9.5,
+      "seconds": 5.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 10.0,
+      "seconds": 6.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 10.5,
+      "seconds": 6.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 11.0,
+      "seconds": 6.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 11.5,
+      "seconds": 6.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 12.0,
+      "seconds": 7.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 12.5,
+      "seconds": 7.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 13.0,
+      "seconds": 7.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 13.5,
+      "seconds": 8.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 14.0,
+      "seconds": 8.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 14.5,
+      "seconds": 8.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 15.0,
+      "seconds": 9.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 15.5,
+      "seconds": 9.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 16.0,
+      "seconds": 9.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 16.5,
+      "seconds": 9.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 17.0,
+      "seconds": 10.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 17.5,
+      "seconds": 10.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 18.0,
+      "seconds": 10.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 18.5,
+      "seconds": 11.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 19.0,
+      "seconds": 11.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 19.5,
+      "seconds": 11.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 20.0,
+      "seconds": 12.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 20.5,
+      "seconds": 12.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 21.0,
+      "seconds": 12.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 21.5,
+      "seconds": 12.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 22.0,
+      "seconds": 13.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 22.5,
+      "seconds": 13.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 23.0,
+      "seconds": 13.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 23.5,
+      "seconds": 14.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 24.0,
+      "seconds": 14.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 24.5,
+      "seconds": 14.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 25.0,
+      "seconds": 15.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 25.5,
+      "seconds": 15.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 26.0,
+      "seconds": 15.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 26.5,
+      "seconds": 15.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 27.0,
+      "seconds": 16.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 27.5,
+      "seconds": 16.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 28.0,
+      "seconds": 16.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 28.5,
+      "seconds": 17.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 29.0,
+      "seconds": 17.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 29.5,
+      "seconds": 17.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 30.0,
+      "seconds": 18.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 30.5,
+      "seconds": 18.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 31.0,
+      "seconds": 18.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 31.5,
+      "seconds": 18.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 32.0,
+      "seconds": 19.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 32.5,
+      "seconds": 19.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 33.5,
+      "seconds": 20.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 34.5,
+      "seconds": 20.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 35.5,
+      "seconds": 21.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 36.5,
+      "seconds": 21.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 37.5,
+      "seconds": 22.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 38.5,
+      "seconds": 23.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 39.5,
+      "seconds": 23.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 40.5,
+      "seconds": 24.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 41.0,
+      "seconds": 24.6,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 41.5,
+      "seconds": 24.9,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 42.0,
+      "seconds": 25.2,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 42.5,
+      "seconds": 25.5,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 43.0,
+      "seconds": 25.8,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 43.5,
+      "seconds": 26.1,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 44.0,
+      "seconds": 26.4,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 44.5,
+      "seconds": 26.7,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "shaker",
+      "beat": 45.0,
+      "seconds": 27.0,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.01104
+    },
+    {
+      "instrument": "shaker",
+      "beat": 45.5,
+      "seconds": 27.3,
+      "duration": 0.14,
+      "notes": null,
+      "level": 0.023
+    },
+    {
+      "instrument": "pad",
+      "beat": 0.0,
+      "seconds": 0.0,
+      "duration": 5.8,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 0.0,
+      "seconds": 0.0,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 1.75,
+      "seconds": 1.05,
+      "duration": 0.47,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 2.5,
+      "seconds": 1.5,
+      "duration": 0.68,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 0.0,
+      "seconds": 0.0,
+      "duration": 0.393,
+      "notes": [
+        37
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 0.75,
+      "seconds": 0.45,
+      "duration": 0.225,
+      "notes": [
+        37
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 2.0,
+      "seconds": 1.2,
+      "duration": 0.315,
+      "notes": [
+        44
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 2.75,
+      "seconds": 1.65,
+      "duration": 0.285,
+      "notes": [
+        37
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 3.5,
+      "seconds": 2.1,
+      "duration": 0.255,
+      "notes": [
+        49
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "chords",
+      "beat": 4.0,
+      "seconds": 2.4,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 5.75,
+      "seconds": 3.45,
+      "duration": 0.47,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 6.5,
+      "seconds": 3.9,
+      "duration": 0.68,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 4.0,
+      "seconds": 2.4,
+      "duration": 0.393,
+      "notes": [
+        37
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 4.75,
+      "seconds": 2.85,
+      "duration": 0.225,
+      "notes": [
+        37
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 6.0,
+      "seconds": 3.6,
+      "duration": 0.315,
+      "notes": [
+        44
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 6.75,
+      "seconds": 4.05,
+      "duration": 0.285,
+      "notes": [
+        37
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 7.5,
+      "seconds": 4.5,
+      "duration": 0.255,
+      "notes": [
+        49
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "pad",
+      "beat": 8.0,
+      "seconds": 4.8,
+      "duration": 5.8,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 8.0,
+      "seconds": 4.8,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 9.75,
+      "seconds": 5.85,
+      "duration": 0.47,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 10.5,
+      "seconds": 6.3,
+      "duration": 0.68,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 8.0,
+      "seconds": 4.8,
+      "duration": 0.393,
+      "notes": [
+        33
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 8.75,
+      "seconds": 5.25,
+      "duration": 0.225,
+      "notes": [
+        33
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 10.0,
+      "seconds": 6.0,
+      "duration": 0.315,
+      "notes": [
+        40
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 10.75,
+      "seconds": 6.45,
+      "duration": 0.285,
+      "notes": [
+        33
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 11.5,
+      "seconds": 6.9,
+      "duration": 0.255,
+      "notes": [
+        45
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "chords",
+      "beat": 12.0,
+      "seconds": 7.2,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 13.75,
+      "seconds": 8.25,
+      "duration": 0.47,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 14.5,
+      "seconds": 8.7,
+      "duration": 0.68,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 12.0,
+      "seconds": 7.2,
+      "duration": 0.393,
+      "notes": [
+        33
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 12.75,
+      "seconds": 7.65,
+      "duration": 0.225,
+      "notes": [
+        33
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 14.0,
+      "seconds": 8.4,
+      "duration": 0.315,
+      "notes": [
+        40
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 14.75,
+      "seconds": 8.85,
+      "duration": 0.285,
+      "notes": [
+        33
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 15.5,
+      "seconds": 9.3,
+      "duration": 0.255,
+      "notes": [
+        45
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "pad",
+      "beat": 16.0,
+      "seconds": 9.6,
+      "duration": 5.2,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 16.0,
+      "seconds": 9.6,
+      "duration": 0.53,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 17.75,
+      "seconds": 10.65,
+      "duration": 0.47,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 18.5,
+      "seconds": 11.1,
+      "duration": 0.68,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 16.0,
+      "seconds": 9.6,
+      "duration": 0.393,
+      "notes": [
+        40
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 16.75,
+      "seconds": 10.05,
+      "duration": 0.225,
+      "notes": [
+        40
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 18.0,
+      "seconds": 10.8,
+      "duration": 0.315,
+      "notes": [
+        47
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 18.75,
+      "seconds": 11.25,
+      "duration": 0.285,
+      "notes": [
+        40
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 19.5,
+      "seconds": 11.7,
+      "duration": 0.255,
+      "notes": [
+        52
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "chords",
+      "beat": 20.0,
+      "seconds": 12.0,
+      "duration": 0.53,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 21.75,
+      "seconds": 13.05,
+      "duration": 0.47,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 22.5,
+      "seconds": 13.5,
+      "duration": 0.68,
+      "notes": [
+        54,
+        59,
+        63,
+        66
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 20.0,
+      "seconds": 12.0,
+      "duration": 0.393,
+      "notes": [
+        40
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 20.75,
+      "seconds": 12.45,
+      "duration": 0.225,
+      "notes": [
+        40
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 22.0,
+      "seconds": 13.2,
+      "duration": 0.315,
+      "notes": [
+        47
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 22.75,
+      "seconds": 13.65,
+      "duration": 0.195,
+      "notes": [
+        40
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "pad",
+      "beat": 23.0,
+      "seconds": 13.8,
+      "duration": 4.0,
+      "notes": [
+        54,
+        57,
+        61,
+        64
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 23.0,
+      "seconds": 13.8,
+      "duration": 0.53,
+      "notes": [
+        54,
+        57,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 24.75,
+      "seconds": 14.85,
+      "duration": 0.47,
+      "notes": [
+        54,
+        57,
+        61,
+        64
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 25.5,
+      "seconds": 15.3,
+      "duration": 0.68,
+      "notes": [
+        54,
+        57,
+        61,
+        64
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 23.0,
+      "seconds": 13.8,
+      "duration": 0.393,
+      "notes": [
+        35
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 23.75,
+      "seconds": 14.25,
+      "duration": 0.225,
+      "notes": [
+        35
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 25.0,
+      "seconds": 15.0,
+      "duration": 0.315,
+      "notes": [
+        42
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 25.75,
+      "seconds": 15.45,
+      "duration": 0.285,
+      "notes": [
+        35
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 26.5,
+      "seconds": 15.9,
+      "duration": 0.255,
+      "notes": [
+        47
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "chords",
+      "beat": 27.0,
+      "seconds": 16.2,
+      "duration": 0.53,
+      "notes": [
+        54,
+        57,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "bass",
+      "beat": 27.0,
+      "seconds": 16.2,
+      "duration": 0.393,
+      "notes": [
+        35
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 27.75,
+      "seconds": 16.65,
+      "duration": 0.195,
+      "notes": [
+        35
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "pad",
+      "beat": 28.0,
+      "seconds": 16.8,
+      "duration": 4.0,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 28.0,
+      "seconds": 16.8,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "chords",
+      "beat": 29.75,
+      "seconds": 17.85,
+      "duration": 0.47,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.15
+    },
+    {
+      "instrument": "chords",
+      "beat": 30.5,
+      "seconds": 18.3,
+      "duration": 0.68,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.18
+    },
+    {
+      "instrument": "bass",
+      "beat": 28.0,
+      "seconds": 16.8,
+      "duration": 0.393,
+      "notes": [
+        37
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 28.75,
+      "seconds": 17.25,
+      "duration": 0.225,
+      "notes": [
+        37
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "bass",
+      "beat": 30.0,
+      "seconds": 18.0,
+      "duration": 0.315,
+      "notes": [
+        44
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "bass",
+      "beat": 30.75,
+      "seconds": 18.45,
+      "duration": 0.285,
+      "notes": [
+        37
+      ],
+      "level": 0.24
+    },
+    {
+      "instrument": "bass",
+      "beat": 31.5,
+      "seconds": 18.9,
+      "duration": 0.255,
+      "notes": [
+        49
+      ],
+      "level": 0.12
+    },
+    {
+      "instrument": "chords",
+      "beat": 32.0,
+      "seconds": 19.2,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "bass",
+      "beat": 32.0,
+      "seconds": 19.2,
+      "duration": 0.393,
+      "notes": [
+        37
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 32.75,
+      "seconds": 19.65,
+      "duration": 0.195,
+      "notes": [
+        37
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "pad",
+      "beat": 33.0,
+      "seconds": 19.8,
+      "duration": 6.4,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "chords",
+      "beat": 33.0,
+      "seconds": 19.8,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "bass",
+      "beat": 33.0,
+      "seconds": 19.8,
+      "duration": 0.393,
+      "notes": [
+        33
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 35.0,
+      "seconds": 21.0,
+      "duration": 0.315,
+      "notes": [
+        40
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "chords",
+      "beat": 37.0,
+      "seconds": 22.2,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "bass",
+      "beat": 37.0,
+      "seconds": 22.2,
+      "duration": 0.393,
+      "notes": [
+        33
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 39.0,
+      "seconds": 23.4,
+      "duration": 0.315,
+      "notes": [
+        40
+      ],
+      "level": 0.2
+    },
+    {
+      "instrument": "chords",
+      "beat": 41.0,
+      "seconds": 24.6,
+      "duration": 0.53,
+      "notes": [
+        56,
+        59,
+        61,
+        64
+      ],
+      "level": 0.23
+    },
+    {
+      "instrument": "bass",
+      "beat": 41.0,
+      "seconds": 24.6,
+      "duration": 0.393,
+      "notes": [
+        33
+      ],
+      "level": 0.27
+    },
+    {
+      "instrument": "bass",
+      "beat": 41.75,
+      "seconds": 25.05,
+      "duration": 0.195,
+      "notes": [
+        33
+      ],
+      "level": 0.14
+    },
+    {
+      "instrument": "pad",
+      "beat": 42.0,
+      "seconds": 25.2,
+      "duration": 5.2,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.078
+    },
+    {
+      "instrument": "resolution",
+      "beat": 42.0,
+      "seconds": 25.2,
+      "duration": 4.5,
+      "notes": [
+        56,
+        59,
+        63,
+        68
+      ],
+      "level": 0.28
+    },
+    {
+      "instrument": "bass",
+      "beat": 42.0,
+      "seconds": 25.2,
+      "duration": 2.325,
+      "notes": [
+        37
+      ],
+      "level": 0.25
+    }
+  ]
+}

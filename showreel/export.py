@@ -31,9 +31,9 @@ def master_audio():
     raw, score = OUT / "raw-score.wav", OUT / "score.wav"
     if not raw.exists():
         subprocess.run([sys.executable, str(ROOT / "audio.py"), str(OUT)], check=True)
-    first = run(["-i", str(raw), "-af", "highpass=f=35,loudnorm=I=-20:TP=-1.5:LRA=7:print_format=json", "-f", "null", os.devnull], True)
+    first = run(["-i", str(raw), "-af", "highpass=f=38,loudnorm=I=-20:TP=-1.5:LRA=7:print_format=json", "-f", "null", os.devnull], True)
     values = json.loads(re.findall(r"\{[\s\S]*?\}", first.stderr)[-1])
-    filt = ("highpass=f=35,loudnorm=I=-20:TP=-1.5:LRA=7:linear=true"
+    filt = ("highpass=f=38,loudnorm=I=-20:TP=-1.5:LRA=7:linear=true"
             f":measured_I={values['input_i']}:measured_TP={values['input_tp']}"
             f":measured_LRA={values['input_lra']}:measured_thresh={values['input_thresh']}"
             f":offset={values['target_offset']}")

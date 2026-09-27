@@ -1,6 +1,6 @@
 # Blurb v6 — editable showreel
 
-29.4 seconds · 1920 × 1080 · 60 fps · original 96 BPM warm electronic pulse · no voiceover.
+29.4 seconds · 1920 × 1080 · 60 fps · Signal Flow, original 100 BPM score · no voiceover.
 
 This is the supplied v5 animation, refined for the Blurb landing-page hero. Notification gathering, logo morphs, summary highlights, expansion, app selection, model download and the on-device message flow retain their original order and timing. UI easing is smooth, logo star bursts are removed, rings are simplified, and grain / background movement are reduced. Feature headlines use Noto Sans; the Blurb wordmark is unchanged.
 
@@ -67,9 +67,9 @@ Render sections pre-roll the same source timeline before capturing their first f
 
 ## Audio
 
-audio.py creates an original deterministic score from soft synth layers, a rounded low pulse, soft offbeat chord pulses, brushed filtered texture and restrained chapter washes. There are no UI cues, bells, claps, bright arpeggios or impact booms. The summary highlights and app switches have no individual sound.
+audio.py creates Signal Flow, the original score selected as option B: restrained synth chords, a syncopated bass line, rounded kick, soft brushed percussion and a quiet pad. There are no stock recordings, UI cues, bells, claps, bright arpeggios or impact booms. The summary highlights and app switches have no individual sound.
 
-The included audio/ directory contains the music stem, transition-wash stem, mastered score and measured loudness. Regeneration writes to out/ and does not overwrite these reference files. Transition wash centers are at 4.8, 13.8, 16.8 and 24.6 seconds. Music runs at 96 BPM against the fixed 29.4-second output timeline.
+The included audio/ directory contains harmony, bass, rhythm and atmosphere stems, the mastered score, event-level score.json, timing notes and measured loudness. Regeneration writes to out/ and does not overwrite these reference files. Music uses the animation's 100 BPM grid (one beat every 0.6 seconds), with scene changes at 4.8, 13.8, 16.8 and 19.8 seconds, a closing resolution at 25.2 seconds, and a gentle fade from 27.6 to 29.4 seconds. The deterministic seed reproduces the approved option B audition exactly.
 
 export.py uses two-pass loudness normalization targeting −20 LUFS integrated and a −1.5 dBTP ceiling. It measures the finished AAC files as well as the WAV and fails if media integrity, dimensions, frame rate, duration or the web size budgets are wrong.
 

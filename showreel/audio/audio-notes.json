@@ -1,16 +1,26 @@
 {
-  "bpm": 96,
+  "title": "Signal Flow",
+  "selectedOption": "B",
+  "bpm": 100,
   "duration": 29.4,
   "sampleRate": 48000,
   "uiCues": [],
-  "transitionWashCenters": [
-    4.8,
-    13.8,
-    16.8,
-    24.6
+  "stems": [
+    "harmony.wav",
+    "bass.wav",
+    "rhythm.wav",
+    "atmosphere.wav"
   ],
+  "majorCuesSeconds": {
+    "logoReveal": 4.8,
+    "apps": 13.8,
+    "onDevice": 16.8,
+    "privacy": 19.8,
+    "closingResolution": 25.2
+  },
   "masterTarget": {
     "integratedLufs": -20,
     "truePeakDbtp": -1.5
-  }
+  },
+  "scoreFile": "score.json"
 }
