@@ -3,8 +3,9 @@
   // Workers Builds deploys main on every push. The name must match the Worker in the dashboard.
   "name": "blurb-website",
   "compatibility_date": "2026-09-24",
+  "build": {"command": "npm run build && npm test"},
   "assets": {
-    "directory": ".",
+    "directory": "./dist",
     // Missing pages show 404.html with a real 404 status.
     "not_found_handling": "404-page",
     // /guide serves guide.html, and /guide.html redirects to /guide.

@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "repository": "swimxd/eduprofix",
+      "commit": "7c12202041cf6f63626f54d2bcdd5a04f8aa7116",
+      "route": "eduprofix",
+      "deployKeyEnv": "EDUPROFIX_DEPLOY_KEY_B64"
+    },
+    {
+      "repository": "swimxd/world-game",
+      "commit": "2bd2f7c6e1ab18f636901f8d61fd84c806d98865",
+      "route": "eduprofix_remastered",
+      "deployKeyEnv": "WORLD_GAME_DEPLOY_KEY_B64"
+    }
+  ]
+}

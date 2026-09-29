@@ -4,3 +4,5 @@ showreel/out/
 showreel/__pycache__/
 *.log
 tests/browser/
+
+dist/
