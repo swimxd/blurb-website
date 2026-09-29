@@ -122,3 +122,33 @@ body{display:flex;flex-direction:column;height:100vh;height:100dvh}
 #outside button::before{display:none}
 .hud .question,.answers,.countdown{width:calc(100% - 128px)}
 .feedback,.finish-overlay{left:calc((100% - 128px)/2);transform:translateX(-50%)}
+
+/* The bonus edition keeps the familiar lavender panels and generous type. */
+.edition-nav{display:inline-flex;align-items:center;gap:14px;margin-left:20px;color:#d9d9ee;font-size:12px}
+.edition-nav>span{letter-spacing:.08em;text-transform:uppercase;font-size:10px;color:#bcbadb}
+.edition-nav a{text-underline-offset:3px}
+body[data-edition="remastered"] #tribute{background:#1d2230;color:#b8c8cd}
+body[data-edition="remastered"] #outside{background:#1d2230}
+.settings-panel{position:absolute;left:110px;top:130px;width:580px;max-height:445px;overflow:auto}
+.settings-panel label{margin:10px 0;font-size:19px}
+.settings-panel input:not([type="checkbox"]):not([type="range"]){width:350px}
+.settings-panel .help{font-size:15px}
+.options{margin-top:14px;font-size:17px}
+.options summary{cursor:pointer;padding:8px 0}
+.options label{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.options input[type="range"]{width:220px;accent-color:#636686}
+.options label.check{justify-content:flex-start;font-size:15px;gap:8px}
+.options select{font-size:17px}
+.map-title{position:absolute;left:35px;top:18px;font-size:47px}
+.map-intro{position:absolute;left:37px;top:75px;font-size:17px;color:#676780}
+.map-grid{position:absolute;left:35px;right:35px;top:110px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.map-card{min-height:0;padding:0 0 9px;text-align:left;overflow:hidden;font-family:Tahoma,Arial,sans-serif;background:#f0f0f8;box-shadow:0 2px 6px #66677b45;border:3px solid #c2c3d0;border-radius:8px}
+.map-card.selected{border-color:#575c88;box-shadow:0 0 0 2px #fafbff,0 3px 8px #66677b66}
+.map-card svg{display:block;width:100%;height:124px;object-fit:cover}
+.map-name{display:block;font:bold 21px/27px Tahoma,Arial,sans-serif;margin:3px 12px 0}
+.map-caption{display:block;font:12px/18px Tahoma,Arial,sans-serif;margin:0 12px;white-space:nowrap}
+#game[data-screen="maps"] .rightfooter{font-size:25px;min-height:51px}
+#game[data-screen="maps"] .footer button{font-size:25px;min-height:51px}
+@media(max-width:640px){.edition-nav{display:flex;margin:4px 0 0;justify-content:center}#tribute{padding:6px 10px;font-size:11px}}
+
+.car-count{position:absolute;left:49px;top:128px;width:340px;text-align:center;font:15px Arial,sans-serif;color:#6e718e}

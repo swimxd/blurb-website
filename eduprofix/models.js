@@ -1,5 +1,6 @@
 import * as THREE from './vendor/three.module.js';
 import {assetUrl} from './assets.js';
+import {createRemasteredCar} from './remastered-cars.js';
 const dataCache=new Map(), textureCache=new Map();
 const loader=new THREE.TextureLoader();
 export function texture(path){
@@ -39,6 +40,7 @@ export async function loadModel(path){
  const result=new THREE.Group();result.scale.z=-1;result.add(node(data.root));return result;
 }
 export async function loadCar(definition){
+ if(definition.remasteredId)return createRemasteredCar(definition);
  const group=new THREE.Group(),body=await loadModel('models/'+definition.model);
  // Converted vehicle bodies face +Z; driving and the front axle use -Z.
  // Keep this local to cars: rotating the simulation root also reverses steering.

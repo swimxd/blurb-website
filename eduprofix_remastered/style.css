@@ -1,0 +1,154 @@
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#151522;font-family:Arial,sans-serif;color:#3b396d}#frame{height:calc(100% - 28px);display:flex;align-items:center;justify-content:center}#game{position:relative;width:800px;height:600px;flex:none;transform-origin:center;background:#e8e8f6 url('/eduprofix_remastered/assets/models/back/backgrnd.bmp') center/100% 100%;overflow:hidden}#scene,#ui{position:absolute;inset:0;width:800px;height:600px}#ui{pointer-events:none}#ui>*{pointer-events:auto}#outside{height:28px;text-align:center;color:#aaaabd;font:12px/28px Arial}#outside button{font-size:11px;background:none;border:0;color:#d5d5eb;cursor:pointer}button,input,select{font:inherit;color:inherit}button{cursor:pointer;border:0;background:linear-gradient(120deg,#ececf3,#f6f6ff 60%,#d5d6e5);border-radius:10px;box-shadow:inset 2px 2px 3px #fff,inset -4px -4px 5px #a4a9b6,2px 3px 3px #77818a;font-family:Impact,'Arial Narrow',Arial,sans-serif;font-size:34px;padding:13px 25px;min-height:60px}button:hover{filter:brightness(1.045)}button:active{box-shadow:inset 3px 3px 6px #9298ab;transform:translateY(1px)}button:disabled{opacity:.45;cursor:default}button.small{font-size:24px;min-height:43px;padding:7px 18px}h1,h2,p{margin:0}h1,h2{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-weight:normal}h1{font-size:65px}h2{font-size:38px}label{display:block;margin:16px 0;font-size:20px}input,select{padding:9px;border:1px solid #9c9bb5;background:#f2f2fb;border-radius:4px;font-size:22px;max-width:100%}.panel{background:#e5e6f1b8;border-radius:12px;box-shadow:inset 2px 2px 4px #fff,inset -3px -3px 4px #aaaebb,2px 3px 4px #8a91a1;padding:20px}.name{position:absolute;left:25px;top:24px;max-width:425px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.footer{position:absolute;left:32px;bottom:18px;display:flex;gap:25px}.rightfooter{position:absolute;right:32px;bottom:18px}.menu{position:absolute;left:480px;top:180px;display:grid;gap:28px;width:260px}.stats{position:absolute;left:40px;top:157px;width:344px;height:368px;font-size:19px;line-height:1.5}.stats dl{display:grid;grid-template-columns:1fr auto;margin:0}.stats dd{margin:0}.bars{height:90px;display:flex;align-items:end;gap:3px;border-bottom:1px solid;padding:0 10px}.bars i{flex:1;background:#85849f;min-height:5px}.list{position:absolute;left:25px;top:170px;width:748px}.row{display:grid;grid-template-columns:1fr 60px 195px;border-bottom:1px solid #9d9baf;align-items:center;min-height:65px;font-size:24px;font-weight:bold;gap:8px}.row button{min-height:52px;font-size:27px;padding:7px}.row span{padding:8px}.row .points{border-left:1px solid #aaa;border-right:1px solid #aaa;text-align:center}.help{font-size:17px;line-height:1.5}.questions{position:absolute;left:35px;top:142px;width:730px;height:360px;overflow:auto}.question-row{padding:7px;display:grid;grid-template-columns:1fr 1fr 35px;gap:10px;border-bottom:1px solid #bbb;font-size:20px}.hud{position:absolute;inset:0;color:white;pointer-events:none!important;text-shadow:1px 1px 2px #333}.hud .question{position:absolute;left:0;top:0;width:672px;height:32px;background:#646577bb;text-align:center;font-size:22px;line-height:32px}.answers{position:absolute;top:32px;left:0;width:672px;height:32px;display:flex;pointer-events:auto}.answer{flex:1;text-align:center;font-size:21px;line-height:32px;cursor:pointer;overflow:hidden;white-space:nowrap}.answer img{max-width:90%;height:29px;vertical-align:middle}.question img{height:29px;vertical-align:middle}.sidebar{position:absolute;right:0;top:0;bottom:0;width:128px;background:#56556cbb;padding:6px;font-size:19px}.standings{position:relative;height:470px;margin-top:13px;font-size:17px}.standing{position:absolute;left:0;white-space:nowrap}.lives{position:absolute;top:90px;left:25px;font-size:32px;color:#ff778c}.speed{position:absolute;right:136px;bottom:9px;color:#070db7;font-size:47px}.timing{position:absolute;left:5px;bottom:12px;font-size:16px}.feedback{position:absolute;left:120px;top:170px;width:430px;text-align:center;font:bold 30px Arial}.pause{position:absolute;left:10px;top:140px;opacity:.7;font-size:15px;min-height:30px;padding:4px 8px}.results{position:absolute;top:125px;left:30px;width:740px;border-collapse:collapse;font-size:20px}.results th,.results td{text-align:left;padding:7px;border-bottom:1px solid #aaa}.upgrade{position:absolute;left:30px;top:420px;display:flex;gap:12px}.upgrade button{font-size:21px;min-height:44px;padding:8px 15px}#notice{position:absolute;bottom:80px;left:70px;right:70px;text-align:center;background:#373454ee;color:white;border-radius:8px;padding:12px;display:none;z-index:10;font-size:18px}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#29273977;z-index:5}.overlay .panel{text-align:center;min-width:400px;background:#e7e7f4}.overlay button{margin:12px}.flag-image{height:27px;max-width:100%;object-fit:contain}#game:fullscreen{transform:none!important;width:100vw;height:100vh}a{color:inherit}
+
+.menu{top:150px;gap:18px}.menu button{font-size:30px}.answers[hidden]{display:none}
+
+/* Reference layout pass: original 500x375 screens mapped to an 800x600 stage. */
+body{font-family:Tahoma,Arial,sans-serif}
+button{position:relative;isolation:isolate;background:#e5e7f2b8;border-radius:5px;box-shadow:inset 2px 2px 4px #fff,inset -3px -3px 4px #969ba8,2px 3px 3px #9297a3}
+button::before,.panel::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/eduprofix_remastered/assets/models/tlacitka/tlacitko_singmult.png') center/100% 100% no-repeat;filter:grayscale(1);opacity:.3;pointer-events:none}
+.panel{isolation:isolate;background:#e7e8f3a0;border-radius:7px}
+.panel::before{background-image:url('/eduprofix_remastered/assets/models/tlacitka/tlacitko_hracdetaily.png');opacity:.22}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #696dbc;outline-offset:3px}
+#game[data-screen="menu"] .name{left:32px;top:19px;width:355px;height:113px;max-width:355px;padding:16px 22px;text-align:center;font-size:56px;font-style:italic;isolation:isolate}
+#game[data-screen="menu"] .name::before{content:"";position:absolute;inset:0;z-index:-1;background:url('/eduprofix_remastered/assets/models/tlacitka/tlacitko_hracmeno.png') center/100% 100% no-repeat;filter:grayscale(1);opacity:.4}
+.stats{font-size:18px;line-height:1.25;padding:25px 20px 20px}
+.stat-line{display:grid;grid-template-columns:1fr 45px 79px;line-height:21px;font-size:18px}
+.stat-line>span:nth-child(n+2){text-align:center}
+.stat-gap{margin-top:10px}
+.rating{text-align:center;margin-top:12px;font-size:18px}
+.bars{position:relative;height:74px;margin:6px 16px 0;padding:0 0 0 2px;gap:2px;border-left:1px solid #45445e}
+.bars i{background:#9292ad;border:1px solid #83829d}
+.bar-max{position:absolute;right:-11px;top:-8px;font-size:16px}
+.menu{left:484px;top:180px;gap:28px;width:260px}
+.menu button{font-size:42px;min-height:98px;padding:11px 8px}
+#game[data-screen="menu"] .footer button{width:195px;min-height:54px;font-size:28px}
+.flag-shortcut{position:absolute;left:248px;bottom:18px;width:205px;min-height:50px!important;font-size:24px!important}
+#resume{position:absolute;left:483px;bottom:18px;width:260px;min-height:50px;font-size:24px}
+.nav-arrows{position:absolute;left:47px;top:10px;display:flex;gap:28px}
+button.arrow{background:transparent url('/eduprofix_remastered/assets/models/tlacitka/sipka.png') center/contain no-repeat;border:0;border-radius:0;box-shadow:none;font-size:0;width:170px;height:116px;min-height:0;padding:0;filter:grayscale(1)}
+button.arrow::before{display:none}
+button.arrow:hover{filter:grayscale(1) brightness(1.06)}
+button.arrow.left{transform:scaleX(-1)}
+button.arrow.up{transform:rotate(-90deg)}
+button.arrow.down{transform:rotate(90deg)}
+.subject-name,.subject-info{position:absolute;top:128px;height:370px}
+.subject-name{left:48px;width:345px;text-align:center;padding:24px 30px}
+.subject-name h2{font: bold 42px/1.1 Tahoma,Arial,sans-serif}
+.subject-info{left:424px;width:342px;padding:22px}
+.minor-title{font-size:16px;margin-bottom:10px}
+.subject-status{font:bold 22px/1.25 Tahoma,Arial;margin-top:17px}
+#game[data-screen="subjects"] .footer button,#game[data-screen="subjects"] .rightfooter,#game[data-screen="cars"] .footer button,#game[data-screen="cars"] .rightfooter{width:250px;min-height:65px}
+.game-status{position:absolute;left:25px;top:102px;font-size:22px;font-weight:bold}
+.game-status small{display:block;font-size:18px;font-weight:normal}
+#game[data-screen="games"] .name{font-size:68px;top:18px}
+.list{top:178px;width:748px;border:1px solid #9695a8}
+.row{grid-template-columns:1fr 60px 195px;font-size:23px;gap:0;min-height:62px}
+.row:last-child{border-bottom:0}
+.row .points{height:100%;display:flex;align-items:center;justify-content:center}
+.row button{margin:3px;min-height:55px}
+#prevpage,#nextpage{position:absolute;right:72px;width:87px;height:54px}
+#prevpage{top:106px}#nextpage{top:443px}
+.car-info{position:absolute;left:423px;top:126px;width:342px;height:370px;padding:18px 20px}
+.car-info h2{text-align:center;font-size:36px;padding:8px 6px;margin:0 6px 26px;border-radius:8px;background:#e9eaf4a0;box-shadow:inset 2px 2px 4px #fff,inset -3px -3px 4px #9499a4}
+.car-info p{font:24px/1.18 Tahoma,Arial,sans-serif}
+.round-title{position:absolute;left:86px;top:44px;font-size:41px;color:#899bb6}
+.study-caption{position:absolute;left:85px;top:104px;width:626px;text-align:center;color:#315a32;font-size:17px}
+.study-header{position:absolute;left:555px;top:129px;width:156px;display:grid;grid-template-columns:85px 70px;font-size:16px;text-align:center}
+.questions{left:89px;top:149px;width:623px;height:370px;overflow:auto;padding-right:1px}
+.question-row{position:relative;grid-template-columns:27px 212px 29px 198px 85px 70px;gap:0;font:16px/22px Tahoma,Arial,sans-serif;padding:0;border-bottom:1px solid #a3a3b4;min-height:23px}
+.question-row:first-child{border-top:1px solid #9b9bad}
+.question-row>span{min-width:0;text-align:center}
+.question-row>span:first-child{text-align:left}
+.question-row .study-prompt{text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:5px}
+.question-row .study-answer{text-align:left;padding-left:6px}
+.question-row .flag-image{height:17px;max-width:120px;vertical-align:middle}
+.question-row.missed{color:#a73840}
+.study-answer .flag-image:hover{position:relative;z-index:2;transform:scale(4);transform-origin:left center;box-shadow:0 0 1px #777}
+#game[data-screen="intro"] .footer button{font-size:29px}
+#game[data-screen="intro"] #race{font-size:0;width:215px}
+#game[data-screen="intro"] #race::after{content:"Start!";font-size:34px}
+.hud{font-family:Arial,sans-serif;text-shadow:1px 1px 1px #454545}
+.hud .question{font-size:20px;background:#55586ca6}
+.sidebar{background:#11131b80;padding:0 3px;font-size:20px;text-align:center}
+.standings{margin-top:14px;text-align:left;font:bold 16px/18px Tahoma,Arial,sans-serif;height:450px}
+.standing{transition:top .15s linear;max-width:124px;overflow:hidden;text-overflow:ellipsis}
+.lives{top:98px;left:11px;width:44px;height:42px;color:#fff;text-align:center;font:bold 17px/42px Arial;text-shadow:none}
+.lives::before{content:"\2665";position:absolute;inset:0;color:#ca6b71;font:53px/42px Arial;z-index:-1}
+.lives span{position:relative;top:-2px}
+.timing{font: bold 15px/18px Arial,sans-serif;bottom:5px;left:3px}
+.speed{font:48px/1 Arial,sans-serif;bottom:7px;right:134px}
+.pause{top:152px;left:7px;opacity:.08;font-size:14px;min-height:28px;padding:3px 7px}
+.pause:hover,.pause:focus-visible{opacity:.95}
+.finish-message{position:absolute;left:24px;top:30px;font:bold 20px Tahoma,Arial;color:#a32d30}
+.overall-title{position:absolute;left:24px;top:80px;font-size:21px}
+.results{top:106px;left:64px;width:672px;font:19px/22px Tahoma,Arial,sans-serif}
+.results th,.results td{padding:0 4px;border:0;font-weight:normal;white-space:nowrap;text-align:right}
+.results th:first-child,.results td:first-child{text-align:left;width:190px}
+.player-result{color:#ffff00;text-shadow:1px 1px 1px #625f44}
+.last-results{position:absolute;left:24px;top:332px;font-size:20px;line-height:22px}
+.last-results ol{margin:2px 0 0;padding-left:61px;font-size:18px;line-height:21px}
+.upgrade{left:315px;top:378px;width:200px;display:flex;flex-direction:column;gap:5px}
+.upgrade p{font-size:18px;text-align:center;margin-bottom:3px}
+.upgrade button{width:200px;min-height:49px;font-size:28px;padding:5px 8px}
+#game[data-screen="results"] .footer button{font-size:22px;min-height:40px;padding:6px 16px}
+#game[data-screen="results"] #nextRound{right:40px;bottom:28px;width:173px;height:111px}
+
+.lives{isolation:isolate}
+/* The original textures already contain their bevels. */
+button::before,.panel::before{display:none}
+.study-header{font-size:15px;column-gap:3px}
+.countdown{position:absolute;left:0;top:220px;width:672px;text-align:center;font:bold 100px/1 Arial,sans-serif;color:#ffff00;text-shadow:2px 3px 2px #333}
+
+.finish-overlay{position:absolute;left:285px;top:245px;font:bold 17px/21px Arial,sans-serif;color:#fff;text-shadow:1px 1px 2px #333;pointer-events:none!important}.finish-overlay h2{font:bold 25px Arial,sans-serif;margin-bottom:8px}.finish-overlay ol{margin:0;padding-left:28px}
+
+.standing small{display:block;font:12px/15px Arial,sans-serif;opacity:.85}.standing{transition:none}
+
+/* Reference HUD: one colored score/name line per racer. */
+.sidebar{background:#56556c99;padding:0 3px;font:26px/30px Arial,sans-serif;text-shadow:none}
+.standings{margin-top:10px;height:475px;font:bold 17px/22px Arial,sans-serif}
+.standing{max-width:124px;transition:top .12s linear}
+
+/* Page chrome stays visible; the race camera expands with the browser. */
+body{display:flex;flex-direction:column;height:100vh;height:100dvh}
+#tribute{flex:none;padding:8px 12px;text-align:center;color:#aaaabd;font:13px/18px Arial,sans-serif}
+#frame{flex:1;min-height:0;height:auto;overflow:hidden}
+#frame:fullscreen{width:100vw;height:100vh;background:#151522}
+#game{background-size:800px 600px;background-repeat:no-repeat}
+#scene{width:100%;height:100%}
+#ui{left:50%;right:auto;transform:translateX(-50%)}
+#game[data-screen="race"] #ui{left:0;width:100%;transform:none}
+#outside{flex:none;height:auto;min-height:48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 14px;padding:6px 12px;font:12px/18px Arial,sans-serif}
+#outside button{font:inherit;min-height:36px;padding:8px 14px;border:1px solid #55556c;border-radius:5px;background:#252537;box-shadow:none;color:#ddddec}
+#outside button::before{display:none}
+.hud .question,.answers,.countdown{width:calc(100% - 128px)}
+.feedback,.finish-overlay{left:calc((100% - 128px)/2);transform:translateX(-50%)}
+
+/* The bonus edition keeps the familiar lavender panels and generous type. */
+.edition-nav{display:inline-flex;align-items:center;gap:14px;margin-left:20px;color:#d9d9ee;font-size:12px}
+.edition-nav>span{letter-spacing:.08em;text-transform:uppercase;font-size:10px;color:#bcbadb}
+.edition-nav a{text-underline-offset:3px}
+body[data-edition="remastered"] #tribute{background:#1d2230;color:#b8c8cd}
+body[data-edition="remastered"] #outside{background:#1d2230}
+.settings-panel{position:absolute;left:110px;top:130px;width:580px;max-height:445px;overflow:auto}
+.settings-panel label{margin:10px 0;font-size:19px}
+.settings-panel input:not([type="checkbox"]):not([type="range"]){width:350px}
+.settings-panel .help{font-size:15px}
+.options{margin-top:14px;font-size:17px}
+.options summary{cursor:pointer;padding:8px 0}
+.options label{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.options input[type="range"]{width:220px;accent-color:#636686}
+.options label.check{justify-content:flex-start;font-size:15px;gap:8px}
+.options select{font-size:17px}
+.map-title{position:absolute;left:35px;top:18px;font-size:47px}
+.map-intro{position:absolute;left:37px;top:75px;font-size:17px;color:#676780}
+.map-grid{position:absolute;left:35px;right:35px;top:110px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.map-card{min-height:0;padding:0 0 9px;text-align:left;overflow:hidden;font-family:Tahoma,Arial,sans-serif;background:#f0f0f8;box-shadow:0 2px 6px #66677b45;border:3px solid #c2c3d0;border-radius:8px}
+.map-card.selected{border-color:#575c88;box-shadow:0 0 0 2px #fafbff,0 3px 8px #66677b66}
+.map-card svg{display:block;width:100%;height:124px;object-fit:cover}
+.map-name{display:block;font:bold 21px/27px Tahoma,Arial,sans-serif;margin:3px 12px 0}
+.map-caption{display:block;font:12px/18px Tahoma,Arial,sans-serif;margin:0 12px;white-space:nowrap}
+#game[data-screen="maps"] .rightfooter{font-size:25px;min-height:51px}
+#game[data-screen="maps"] .footer button{font-size:25px;min-height:51px}
+@media(max-width:640px){.edition-nav{display:flex;margin:4px 0 0;justify-content:center}#tribute{padding:6px 10px;font-size:11px}}
+
+.car-count{position:absolute;left:49px;top:128px;width:340px;text-align:center;font:15px Arial,sans-serif;color:#6e718e}
