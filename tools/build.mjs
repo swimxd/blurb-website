@@ -3,6 +3,7 @@ import {join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {fileURLToPath} from 'node:url';
 import {execFileSync} from 'node:child_process';
+import {validateReleasePin} from './release-pin.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 const out=join(root,'dist');
@@ -15,7 +16,7 @@ for(const name of ['404.html','apple-touch-icon.png','favicon.svg','flappy.html'
 const scratch=await mkdtemp(join(tmpdir(),'blurb-games-'));
 try{
  for(const game of releases.games){
-  if(!/^swimxd\/(eduprofix|world-game)$/.test(game.repository)||! /^[a-f0-9]{40}$/.test(game.commit)||! /^eduprofix(?:_remastered)?$/.test(game.route))throw new Error('Invalid game release pin');
+  validateReleasePin(game);
   const source=join(scratch,game.route);
   let env={...process.env,GIT_TERMINAL_PROMPT:'0'};
   let remote='https://github.com/'+game.repository+'.git';

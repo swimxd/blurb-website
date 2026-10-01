@@ -6,7 +6,7 @@ Public website for Blurb: the product page, user guide, support and privacy poli
 
 The desktop-browser game is available at `/eduprofix/`. It is a static export of EduProfix restoration v0.7.0 with its models, textures and question data. No Node server or installer is needed on the website. The race supports widescreen displays, with a tribute to the original developers above the game. WASD or arrow keys drive, Escape pauses, and progress is stored locally in the visitor's browser. The Blurb product homepage is unchanged.
 
-Game source lives in two private repositories: [Classic](https://github.com/swimxd/eduprofix) and [World Game](https://github.com/swimxd/world-game). This repository only pins their commits in `game-releases.json`. The build fetches those exact commits, runs their tests and exports, and assembles the website into `dist/`. Only `dist/` is deployed. Each game's `build.json` records its source repository and commit. Game assets remain scoped to their existing route.
+Game source lives in three private repositories: [Classic](https://github.com/swimxd/eduprofix), [World Game](https://github.com/swimxd/world-game) and [Mod](https://github.com/swimxd/eduprofix-mod). This repository pins their exact commits in `game-releases.json`. The build fetches those commits, runs their tests and exports, and assembles the website into `dist/`. Only `dist/` is deployed. Each game's `build.json` records its source repository and commit. Game assets remain scoped to their route.
 
 - [Website](https://blurb.fyi/)
 - [User guide](https://blurb.fyi/guide)
@@ -49,12 +49,14 @@ For manual browser QA, run `node tools/qa-fixtures.mjs`, then open `/tests/brows
 
 The bonus edition is available at `/eduprofix_remastered/`: four new maps, four new vehicles, all available immediately. Its progress and saved races are separate from Classic. Both editions share the corrected Turbo steering, keyboard controls, questions and race rules. Each route is a self-contained static export.
 
+The Mod edition is available at `/eduprofix_mod/`: six polished added vehicles, actual ramps, controllable folding gliders and a credited electronic soundtrack. It uses the recovered-asset browser fallback after two pinned Boxedwine/Wine profiles failed built-in D3D8 startup. Its learning progress and audio preferences use separate local saves. The original demo eligibility boundary is conservatively retained. Each exported file has a SHA-256 manifest entry and stays below 25 MiB; this fallback needs no cross-origin isolation headers. Native runtime limits and browser acceptance evidence remain in the private Mod repository.
+
 ## Updating a game
 
 1. Commit changes in its private game repository and wait for its Check game workflow to pass.
 2. Update that repository's full commit SHA in `game-releases.json`.
-3. Run `npm run build` and `npm test`, preview both game routes, then push this website change to main. Workers Builds performs the same build and tests before deploying. A failed fetch or test leaves the current live deployment intact.
+3. Run `npm run build` and `npm test`, preview all three game routes, then push this website change to main. Workers Builds performs the same build and tests before deploying. A failed fetch or test leaves the current live deployment intact.
 
-Local builds use your authenticated Git credential helper. Cloudflare production Builds stores `EDUPROFIX_DEPLOY_KEY_B64` and `WORLD_GAME_DEPLOY_KEY_B64` as secrets, each containing a base64-encoded read-only SSH deploy key scoped to the matching repository. The keys are written only to a temporary directory during fetching, with strict GitHub host-key verification, and are removed afterward. Never put keys in Git or runtime assets. Preview builds require the same read-only secrets in their own build configuration; do not expose them to untrusted branches.
+Local builds use your authenticated Git credential helper. Cloudflare production Builds stores `EDUPROFIX_DEPLOY_KEY_B64`, `WORLD_GAME_DEPLOY_KEY_B64` and `EDUPROFIX_MOD_DEPLOY_KEY_B64` as secrets, each containing a base64-encoded read-only SSH deploy key scoped to its matching repository. The keys are written only to a temporary directory during fetching, with strict GitHub host-key verification, and are removed afterward. Never put keys in Git or runtime assets. Preview builds require the same read-only secrets in their own build configuration; do not expose them to untrusted branches.
 
-A future standalone game domain can build the corresponding game repository with `BASE_PATH=/` and serve its `dist/` directory. Until then the public URLs remain `/eduprofix/` and `/eduprofix_remastered/` on blurb.fyi.
+Classic and World Game also support standalone exports with `BASE_PATH=/`. The Mod export currently requires its named `/eduprofix_mod/` route. The current public URLs are `/eduprofix/`, `/eduprofix_remastered/` and `/eduprofix_mod/` on blurb.fyi.

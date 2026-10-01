@@ -11,6 +11,12 @@
       "commit": "2bd2f7c6e1ab18f636901f8d61fd84c806d98865",
       "route": "eduprofix_remastered",
       "deployKeyEnv": "WORLD_GAME_DEPLOY_KEY_B64"
+    },
+    {
+      "repository": "swimxd/eduprofix-mod",
+      "commit": "7ab12a572d831583e601fcc1b30e19e51ee91199",
+      "route": "eduprofix_mod",
+      "deployKeyEnv": "EDUPROFIX_MOD_DEPLOY_KEY_B64"
     }
   ]
 }

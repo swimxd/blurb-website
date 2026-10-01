@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile,stat} from 'node:fs/promises';
 
-test('both public game routes come from the exact private repository pins',async()=>{
+test('all three public game routes come from the exact private repository pins',async()=>{
  const {games}=JSON.parse(await readFile(new URL('../game-releases.json',import.meta.url),'utf8'));
- assert.deepEqual(games.map(g=>g.route).sort(),['eduprofix','eduprofix_remastered']);
+ assert.deepEqual(games.map(g=>g.route).sort(),['eduprofix','eduprofix_mod','eduprofix_remastered']);
  for(const game of games){
   const build=JSON.parse(await readFile(new URL(`../dist/${game.route}/build.json`,import.meta.url),'utf8'));
   assert.equal(build.repository,game.repository);
