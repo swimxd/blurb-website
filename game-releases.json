@@ -14,7 +14,7 @@
     },
     {
       "repository": "swimxd/eduprofix-mod",
-      "commit": "7ab12a572d831583e601fcc1b30e19e51ee91199",
+      "commit": "c2db865adf4e7a9a7ddefebce1334692310d17d6",
       "route": "eduprofix_mod",
       "deployKeyEnv": "EDUPROFIX_MOD_DEPLOY_KEY_B64"
     }
