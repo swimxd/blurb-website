@@ -10,6 +10,8 @@ test('the Mod route exports the pinned browser release with verified hosting ass
   assert.equal(build.base, '/eduprofix_mod/');
   assert.equal(build.edition, 'mod');
   assert.equal(build.target, 'browser-fallback');
+  const releases = JSON.parse(await readFile(new URL('../game-releases.json', import.meta.url), 'utf8'));
+  assert.equal(build.commit, releases.games.find(game => game.route === 'eduprofix_mod').commit);
   const manifest = JSON.parse(await readFile(new URL('asset-manifest.json', root), 'utf8'));
   assert.ok(manifest.files.length > 400);
   for (const file of manifest.files) {
@@ -22,5 +24,8 @@ test('the Mod route exports the pinned browser release with verified hosting ass
     await assert.rejects(stat(new URL(privatePath, root)), {code: 'ENOENT'});
   }
   const credits = await readFile(new URL('music/CREDITS.md', root), 'utf8');
-  for (const title of ['Wallpaper', 'Tech Live', 'Rocket']) assert.ok(credits.includes(title));
+  for (const title of ['Deliberate Thought', 'Killing Time', 'Blipotron']) assert.ok(credits.includes(title));
+  const catalog = JSON.parse(await readFile(new URL('generated/catalog.json', root), 'utf8'));
+  assert.equal(catalog.cars.length, 10);
+  for (const name of ['Rally Hatchback', 'Delivery Van', 'Farm Pickup', 'Streamliner']) assert.ok(catalog.cars.some(car => car.name === name), name);
 });
