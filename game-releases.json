@@ -8,7 +8,7 @@
     },
     {
       "repository": "swimxd/world-game",
-      "commit": "2bd2f7c6e1ab18f636901f8d61fd84c806d98865",
+      "commit": "eb04e41cd1163c9a119e041afbd86e3f145649fe",
       "route": "eduprofix_remastered",
       "deployKeyEnv": "WORLD_GAME_DEPLOY_KEY_B64"
     },
