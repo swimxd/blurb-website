@@ -24,15 +24,9 @@ Plain HTML and CSS, without a framework or tracking; hero playback uses a small 
 - The privacy policy must say the same thing as the app's `app/src/main/assets/privacy-policy.txt`. Update both together.
 - Build with `npm run build`, run `npm test`, then preview locally with `npm run preview` (Node 22+, no install needed). Open http://127.0.0.1:4173. Check a phone-width window and both color themes.
 
-## When Blurb goes live on Google Play
+## Google Play link
 
-Each page shows a "Coming soon to Google Play" pill. Replace every copy with the live link in one pass:
-
-```bash
-sed -i 's#<span class="play play-soon">Coming soon to Google Play</span>#<a class="play" href="https://play.google.com/store/apps/details?id=com.notifsummarizer.app">Get it on Google Play</a>#g' *.html
-```
-
-Then update the sentence in the closing section of `index.html` that says Blurb is coming to Google Play.
+Blurb is live on Google Play. Every page links to https://play.google.com/store/apps/details?id=com.notifsummarizer.app with `<a class="play">`. If the listing URL ever changes, update every copy together.
 
 This repository does not host app source, build instructions, private diagnostics or APK downloads.
 
